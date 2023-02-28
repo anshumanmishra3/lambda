@@ -13,3 +13,16 @@
 #   type        = string
 #   description = "The key of the ZIP file in the S3 bucket"
 # }
+
+
+
+# variable "lambda_layers_bucket" {
+#   type        = string
+#   description = "The name of the S3 bucket where the ZIP file is stored"
+#   default = "value"
+# }
+
+# variable "lambda_layer.artifact" {
+#   type        = string
+#   description = "The key of the ZIP file in the S3 bucket"
+# }
