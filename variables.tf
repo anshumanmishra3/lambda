@@ -22,7 +22,7 @@ variable "lambda_layers_bucket" {
   default = "layers49"
 }
 
-variable "lambda_layer.artifact" {
+variable "lambda_layer_artifact" {
   type        = string
   description = "The key of the ZIP file in the S3 bucket"
   default = "layer.zip"
