@@ -9,7 +9,7 @@
 resource "aws_lambda_layer_version" "lambda_layer" {
   layer_name = "sagemaker-test-layer"
   s3_bucket = var.lambda_layers_bucket
-  s3_key = var.lambda_layer.artifact
+  s3_key = var.lambda_layer_artifact
 
   compatible_runtimes = ["python3.8"]
 }
