@@ -1,3 +1,12 @@
+resource "aws_lambda_layer_version" "lambda_layer" {
+  filename   = "${path.module}/Modules/layer.zip"
+  layer_name = "sagemaker-test-layer"
+
+  compatible_runtimes = ["python3.8"]
+}
+
+
+
 # module "lambda_layer_s3" {
 #   source = "./modules/lambda_layer"
 
