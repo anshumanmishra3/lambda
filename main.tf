@@ -1,18 +1,18 @@
-resource "aws_lambda_layer_version" "lambda_layer" {
-  filename   = "${path.module}/Modules/layer.zip"
-  layer_name = "sagemaker-test-layer"
-
-  compatible_runtimes = ["python3.8"]
-}
-
-
 # resource "aws_lambda_layer_version" "lambda_layer" {
+#   filename   = "${path.module}/Modules/layer.zip"
 #   layer_name = "sagemaker-test-layer"
-#   s3_bucket = var.lambda_layers_bucket
-#   s3_key = var.lambda_layer.artifact
 
 #   compatible_runtimes = ["python3.8"]
 # }
+
+
+resource "aws_lambda_layer_version" "lambda_layer" {
+  layer_name = "sagemaker-test-layer"
+  s3_bucket = var.lambda_layers_bucket
+  s3_key = var.lambda_layer.artifact
+
+  compatible_runtimes = ["python3.8"]
+}
 
 
 # module "lambda_layer_s3" {
